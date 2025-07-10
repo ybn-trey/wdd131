@@ -1,0 +1,14 @@
+:root {
+    --font-color: #333;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--font-color);
+    display: grid;
+}
+
+nav {
+    display: flex;
+    color: tomato;
+}
