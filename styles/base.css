@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#course-title{
+    display: block;
+    text-align: center;
+}
+
+nav {
+    background-color: #36454f;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#card {
+    display: grid;
+}
+
+
+footer {
+    background-color: #36454f;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 0 auto;
+    }
+}
