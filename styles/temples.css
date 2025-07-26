@@ -69,11 +69,7 @@ footer {
 }
 
 @media (min-width: 640px) {
-    nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        flex: 1 0 auto;
-    }
+    .navigation.open {
+            display: flex;
+        }
 }
