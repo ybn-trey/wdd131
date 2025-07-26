@@ -1,0 +1,14 @@
+nav.navigation {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+#menu {
+    display: none;
+}
+
+.temples-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
