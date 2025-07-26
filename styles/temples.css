@@ -43,7 +43,7 @@ nav.navigation a:hover {
 }
 
 main {
-    max-width: 960px;
+    max-width: 800px;
     margin: auto;
     padding: 1rem;
 }
@@ -66,4 +66,14 @@ footer {
     padding: 1rem;
     background: #2c3e50;
     color: white;
+}
+
+@media (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 0 auto;
+    }
 }
