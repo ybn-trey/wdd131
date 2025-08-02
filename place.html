@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puerto Rico</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Puerto Rico</h1>
+    </header>
+    <main>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/puertorico-large.jpg" media="(min-width: 1000px)">
+                <source srcset="images/puertorico-medium.jpg" media="(min-width: 600px)">
+                <img src="images/puertorico-small.jpg" alt="Puerto Rico">
+            </picture>
+
+            <section class="data overlay-box">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 9,104 sq km</li>
+                    <li><strong>Population:</strong> 3,285,874</li>
+                    <li><strong>Capital:</strong> San Juan</li>
+                    <li><strong>Languages:</strong> Spanish, English</li>
+                    <li><strong>Currency:</strong> US Dollar</li>
+                    <li><strong>Time Zone:</strong> UTC-4</li>
+                    <li><strong>Calling Code:</strong> +1-787, +1-939</li>
+                    <li><strong>Internet TLD:</strong> .pr</li>
+                </ul>
+            </section>
+            <section class="weather overlay-box">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">28 °C</span></li>
+                    <li><strong>Conditions:</strong> Sunny</li>
+                    <li><strong>Wind:</strong> <span id="wind">10 km/h</span></li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill">Calculating...</span></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 🌺 Adjanor Juda Emmanuel 🌴 Puerto Rico</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
