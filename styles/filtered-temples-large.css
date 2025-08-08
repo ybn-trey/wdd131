@@ -1,0 +1,33 @@
+/* Large screen navigation layout */
+nav.navigation {
+    display: flex !important;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-direction: row;
+    background-color: #2c3e50;
+    padding: 0.5rem 0;
+}
+
+nav.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav.navigation a:hover {
+    background-color: #34495e;
+}
+
+/* Hide mobile menu button */
+#menu {
+    display: none;
+}
+
+/* Temple grid layout for larger screens */
+.temples-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
