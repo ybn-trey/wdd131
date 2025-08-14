@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review form by Juda Emmanuel Adjanor">
+    <meta name="author" content="Adjanor Juda Emmanuel">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get" id="reviewForm">
+            <div class="form-group">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <div id="rating">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="installDate">Date of Installation</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="features">Useful Features</label>
+                <div id="features">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="review">Written Review</label>
+                <textarea id="review" name="review"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="userName">User Name (Optional)</label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>©️ <span id="year"></span> 🕸️ Adjanor Juda Emmanuel 🕸️ WDD 131</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

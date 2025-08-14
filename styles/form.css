@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 8px 8px 0 0;
+}
+
+footer {
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6a1b9a;
+    outline: none;
+}
+
+select {
+    background-color: #f9f9f9;
+    color: #555;
+    cursor: pointer;
+}
+
+#rating {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#rating input {
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#rating input:checked~label,
+#rating label:hover {
+    color: #ffb74d;
+}
+
+#rating input:checked~label {
+    color: #ffb74d;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+}
+
+#features input {
+    margin-right: 10px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #6a1b9a;
+    
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #9c4d9e;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
