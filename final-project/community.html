@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Accra eBiking community — events, rentals, and contact form by Adjanor Juda Emmanuel">
+    <meta name="author" content="Adjanor Juda Emmanuel">
+    <title>Community · Accra eBiking Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body data-page="community">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo" aria-hidden="true">⚡</span>
+            <a href="index.html" class="site-title">Accra eBiking Hub</a>
+        </div>
+        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+        <nav aria-label="Primary" class="site-nav">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="bikes.html" data-nav="bikes">Bikes</a>
+            <a href="community.html" data-nav="community">Community</a>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <section class="container">
+            <h1 class="section-title">Community & Rentals</h1>
+            <p>Join group rides, find a rental, or start a conversation.</p>
+
+            <h2>Upcoming events</h2>
+            <ul id="eventsList" class="cards"></ul>
+
+            <h2>Find rentals</h2>
+            <p>These partners offer day and weekly rentals. Call ahead to confirm availability.</p>
+            <ul class="cards" id="rentalPartners"></ul>
+
+            <h2>Say hello</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required autocomplete="name" placeholder="Ama Mensah">
+                </div>
+                <div class="form-field">
+                    <label for="contactEmail">Email</label>
+                    <input id="contactEmail" name="email" type="email" required autocomplete="email"
+                        placeholder="you@example.com">
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" maxlength="500" required
+                        placeholder="I’d like to join the Saturday ride…"></textarea>
+                </div>
+                <fieldset class="form-field">
+                    <legend>Preferred ride pace</legend>
+                    <label><input type="radio" name="pace" value="easy" required> Easy</label>
+                    <label><input type="radio" name="pace" value="moderate"> Moderate</label>
+                    <label><input type="radio" name="pace" value="fast"> Fast</label>
+                </fieldset>
+                <div class="form-field">
+                    <label><input type="checkbox" id="privacy" required> I agree to the <a href="#"
+                            aria-describedby="privacyNote">privacy policy</a>.</label>
+                    <p id="privacyNote" class="note">We only use your info to reply. Nothing is shared.</p>
+                </div>
+                <button class="btn" type="submit">Send message</button>
+                <p id="contactMsg" class="sr-only" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> 🕸️ Adjanor Juda Emmanuel 🕸️ WDD 131</p>
+    </footer>
+    
+</body>
+
+</html>

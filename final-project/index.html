@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home · Accra eBiking Hub</title>
+
+    <meta name="description" content="Accra eBiking Hub — e-bikes, trails, rentals, and community in Accra, Ghana by Adjanor Juda Emmanuel">
+    <meta name="author" content="Adjanor Juda Emmanuel">
+    <link rel="preload" href="images/hero.jpeg" as="image">
+    <link rel="stylesheet" href="styles/styles.css" >
+
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo" aria-hidden="true">⚡</span>
+            <a href="index.html" class="site-title">Accra eBiking Hub</a>
+        </div>
+        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+        <nav aria-label="Primary" class="site-nav">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="bikes.html" data-nav="bikes">Bikes</a>
+            <a href="community.html" data-nav="community">Community</a>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <section class="hero container">
+            <picture>
+                <img src="images/hero.jpeg" width="800" height="480"
+                    alt="People riding an e-bike along a palm-lined street in Accra" loading="eager" decoding="async">
+            </picture>
+            <div class="hero-text">
+                <h1>Ride electric in Accra</h1>
+                <p>Find the best e-bikes for our hills and heat, explore safe routes, rent for the weekend, and join a
+                    friendly community.</p>
+                <a class="btn" href="bikes.html">See top picks</a>
+            </div>
+        </section>
+
+        <section class="features container">
+            <article class="card">
+                <img src="images/bikes.jpg" alt="E-bikes lineup" width="800" height="480" loading="lazy"
+                    decoding="async">
+                <h2>Curated E-Bikes</h2>
+                <p>We profile bikes that thrive on Legon slopes and Osu traffic. Filter by range, price, and terrain.
+                </p>
+            </article>
+            <article class="card">
+                <img src="images/trails.jpg" alt="City trail" width="800" height="480" loading="lazy"
+                    decoding="async">
+                <h2>Local Routes</h2>
+                <p>Discover seaside paths and campus loops. Save favourites to plan your next ride.</p>
+            </article>
+            <article class="card">
+                <img src="images/community_riders.jpg" alt="Community riders" width="800" height="480" loading="lazy"
+                    decoding="async">
+                <h2>Community & Rentals</h2>
+                <p>Join Saturday rides, find rental partners, and get maintenance tips from locals.</p>
+            </article>
+        </section>
+
+        <section class="cta container">
+            <h2>Join our newsletter</h2>
+            <p>Get monthly route updates and rental discounts.</p>
+            <form id="newsletterForm" novalidate>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required
+                        placeholder="you@example.com">
+                </div>
+                <div class="form-field">
+                    <label for="experience">Riding experience</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select one</option>
+                        <option value="new">New to e-bikes</option>
+                        <option value="casual">Casual rider</option>
+                        <option value="regular">Regular commuter</option>
+                    </select>
+                </div>
+                <button class="btn" type="submit">Subscribe</button>
+                <p id="formMsg" class="sr-only" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> 🕸️ Adjanor Juda Emmanuel 🕸️ WDD 131</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Top e-bikes for Accra — filter by terrain and budget, save favourites by Adjanor Juda Emmanuel" />
+    <meta name="author" content="Adjanor Juda Emmanuel">
+    <title>Bikes · Accra eBiking Hub</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body data-page="bikes">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo" aria-hidden="true">⚡</span>
+            <a href="index.html" class="site-title">Accra eBiking Hub</a>
+        </div>
+        <button id="themeToggle" class="btn btn-ghost" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+        <nav aria-label="Primary" class="site-nav">
+            <a href="index.html" data-nav="home">Home</a>
+            <a href="bikes.html" data-nav="bikes">Bikes</a>
+            <a href="community.html" data-nav="community">Community</a>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <section class="container">
+            <h1 class="section-title">Top e-bikes for Accra</h1>
+
+            <div class="controls">
+                <label for="terrain">Terrain:</label>
+                <select id="terrain">
+                    <option value="all">All</option>
+                    <option value="hills">Hills</option>
+                    <option value="city">City</option>
+                    <option value="mixed">Mixed</option>
+                </select>
+
+                <label for="budget">Budget (GHS):</label>
+                <select id="budget">
+                    <option value="any">Any</option>
+                    <option value="lt10000">Under 10,000</option>
+                    <option value="10k-20k">10,000–20,000</option>
+                    <option value="gt20000">20,000+</option>
+                </select>
+
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                    <option value="name">Name</option>
+                    <option value="range">Range</option>
+                    <option value="price">Price</option>
+                </select>
+            </div>
+
+            <div id="bikeList" class="grid"></div>
+
+            <section aria-labelledby="favsHeading" class="favs">
+                <h2 id="favsHeading">Your saved bikes</h2>
+                <div id="favourites" class="grid"></div>
+                <button class="btn btn-ghost" id="clearFavs">Clear saved</button>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> 🕸️ Adjanor Juda Emmanuel 🕸️ WDD 131</p>
+    </footer>
+    
+</body>
+
+</html>
