@@ -1,5 +1,3 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
 
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -8,8 +6,6 @@ const products = [
     { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
     { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
-
-const features = ["Durability", "Ease of Use", "Design", "Performance"];
 
 function populateProductOptions() {
     const productSelect = document.getElementById("product");
@@ -29,56 +25,89 @@ function populateProductOptions() {
     });
 }
 
-function createRatingOptions() {
+function updateStarColors() {
     const ratingDiv = document.getElementById("rating");
+    const radioButtons = ratingDiv.querySelectorAll('input[type="radio"]');
+    const labels = ratingDiv.querySelectorAll('label');
 
-    for (let i = 1; i <= 5; i++) {
-        const label = document.createElement("label");
-        label.textContent = `${i} `;
-        const input = document.createElement("input");
-        input.type = "radio";
-        input.name = "rating";
-        input.id = `rating${i}`;
-        input.value = i;
-        input.required = true;
-        ratingDiv.appendChild(input);
-        ratingDiv.appendChild(label);
-    }
-}
+    radioButtons.forEach((radio, index) => {
+        if (radio.checked) {
 
-function createFeatureOptions() {
-    const featuresDiv = document.getElementById("features");
+            labels[index].style.color = "#ffb74d";
+        } else {
 
-    features.forEach(feature => {
-        const label = document.createElement("label");
-        label.textContent = feature;
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.name = "features";
-        input.value = feature;
-        input.id = `feature-${feature}`;
-        featuresDiv.appendChild(input);
-        featuresDiv.appendChild(label);
-        featuresDiv.appendChild(document.createElement("br"));
+            labels[index].style.color = "#ccc";
+        }
     });
 }
 
-function handleFormSubmit(event) {
-    event.preventDefault();
+function createRatingOptions() {
+    const ratingDiv = document.getElementById("rating");
 
-    const reviewCount = localStorage.getItem("reviewCount") || 0;
-    localStorage.setItem("reviewCount", parseInt(reviewCount) + 1);
+    ratingDiv.innerHTML = '';
 
-    window.location.href = "review.html";
+    const numberOfStars = 5;
+
+    for (let i = 1; i <= numberOfStars; i++) {
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.id = `rating${i}`;
+        input.name = "rating";
+        input.value = i;
+        input.required = true;
+
+        const label = document.createElement("label");
+        label.setAttribute("for", `rating${i}`);
+        label.textContent = "☆";
+
+        ratingDiv.appendChild(input);
+        ratingDiv.appendChild(label);
+
+
+        ratingDiv.appendChild(document.createTextNode(" "));
+    }
+
+
+    const radioButtons = ratingDiv.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function () {
+            updateStarColors();
+        });
+    });
 }
+
 
 function initForm() {
     populateProductOptions();
     createRatingOptions();
-    createFeatureOptions();
+
+    updateStarColors();
 
     const form = document.getElementById("reviewForm");
     form.addEventListener("submit", handleFormSubmit);
 }
 
-window.onload = initForm;
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    alert("Review submitted successfully!");
+}
+
+
+function setFooterYear() {
+    const yearSpan = document.getElementById("year");
+    yearSpan.textContent = new Date().getFullYear();
+}
+
+
+function setLastModifiedDate() {
+    const lastModifiedSpan = document.getElementById("lastModified");
+    lastModifiedSpan.textContent = document.lastModified;
+}
+
+window.onload = function () {
+    initForm();
+    setFooterYear();
+    setLastModifiedDate();
+};
